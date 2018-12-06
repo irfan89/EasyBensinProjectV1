@@ -4,10 +4,17 @@
 
     <application>
         <activity android:name=".MainActivity">
+        </activity>
+        <activity
+                android:name=".NavigationDrawer"
+                android:label=""
+                android:theme="@style/Theme.Design.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
+
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
+
                 <data
                         android:host="main-app"
                         android:scheme="my-main"/>

@@ -12,7 +12,7 @@ class AuthActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_auth)
 
-        addFragment(AuthSignUpFragment(), R.id.frameAuth)
+        addFragment(SplashScreenFragment(), R.id.frameAuth)
     }
 
     fun viewSignUp() {

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single"
+           android:id="@+id/group1">
+        <item
+                android:id="@+id/nav_perusahaan"
+                android:title="Profil Perusahaan"/>
+        <item
+                android:id="@+id/nav_ttg_app"
+                android:title="Tentang Aplikasi"/>
+    </group>
+
+    <item android:title="Connected as">
+        <menu>
+            <group android:checkableBehavior="single"
+                   android:id="@+id/group2">
+                <item
+                        android:id="@+id/nav_username"
+                        android:icon="@drawable/google_plus"
+                        android:title="Share"/>
+                <item
+                        android:id="@+id/nav_number"
+                        android:icon="@drawable/number"
+                        android:title="Send"/>
+            </group>
+        </menu>
+    </item>
+
+
+    <group android:checkableBehavior="single"
+           android:id="@+id/group3">
+        <item
+                android:id="@+id/nav_logout"
+                android:title="Logout"></item>
+    </group>
+
+</menu>

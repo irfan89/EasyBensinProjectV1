@@ -20,6 +20,9 @@
                         android:scheme="my-main"/>
             </intent-filter>
         </activity>
+
+        <activity android:name="order.OrderDataInputActivity"
+                  android:theme="@style/Theme.Design.Light.NoActionBar"></activity>
     </application>
 
 </manifest>

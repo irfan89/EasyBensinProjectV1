@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         android:id="@+id/laySignUp"
         tools:context="com.example.irfan.easybensinv1.auth.AuthActivity"
-        android:background="@drawable/background">
+        android:background="@drawable/back_auth">
 
     <TextView
             android:text="Sign Up"

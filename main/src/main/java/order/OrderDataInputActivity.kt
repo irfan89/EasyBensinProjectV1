@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity
 import com.example.irfan.easybensinv1.main.NavigationDrawer
 import com.example.irfan.easybensinv1.main.R
 import kotlinx.android.synthetic.main.activity_order_data_input.*
+import location.LocationActivity
 
 
 class OrderDataInputActivity : AppCompatActivity() {
@@ -18,10 +19,10 @@ class OrderDataInputActivity : AppCompatActivity() {
     private var mLiter = 0
     private var cBtnState1 = 0
     private var cBtnState2 = 0
-    private val Price = arrayOf(8500, 9000, 9500)
+    private val hPrice = arrayOf(8500, 9350, 10450, 5500)
     private var mPrice = 0
     private var currentPage = 0
-    var sColor = R.color.orderBlack
+    private var sColor = R.color.orderBlack
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,8 +31,10 @@ class OrderDataInputActivity : AppCompatActivity() {
         adapter.addFragment(OrderRegulerFragment(), "Regular")
         adapter.addFragment(OrderPlusFragment(), "Plus")
         adapter.addFragment(OrderSupremeFragment(), "Supreme")
+        adapter.addFragment(OrderDieselFragment(), "Diesel")
         viewPager.adapter = adapter
 
+        orderViewPage()
         viewPager.addOnPageChangeListener(object : OnPageChangeListener {
             override fun onPageScrollStateChanged(state: Int) {
                 clearBtnState(cBtnState1)
@@ -74,7 +77,7 @@ class OrderDataInputActivity : AppCompatActivity() {
             cBtnState1 = mLiter
             buttonState()
             clearBtnState(cBtnState2)
-            mPrice = mLiter * Price[0]
+            mPrice = mLiter * hPrice[currentPage]
             tvJumlahLiter.text = btn5L.text.toString()
             showBill()
         }
@@ -84,7 +87,7 @@ class OrderDataInputActivity : AppCompatActivity() {
             cBtnState1 = mLiter
             buttonState()
             clearBtnState(cBtnState2)
-            mPrice = mLiter * Price[0]
+            mPrice = mLiter * hPrice[currentPage]
             tvJumlahLiter.text = btn10L.text.toString()
             showBill()
         }
@@ -94,7 +97,7 @@ class OrderDataInputActivity : AppCompatActivity() {
             cBtnState1 = mLiter
             buttonState()
             clearBtnState(cBtnState2)
-            mPrice = mLiter * Price[0]
+            mPrice = mLiter * hPrice[currentPage]
             tvJumlahLiter.text = btn15L.text.toString()
             showBill()
         }
@@ -104,7 +107,7 @@ class OrderDataInputActivity : AppCompatActivity() {
             cBtnState1 = mLiter
             buttonState()
             clearBtnState(cBtnState2)
-            mPrice = mLiter * Price[0]
+            mPrice = mLiter * hPrice[currentPage]
             tvJumlahLiter.text = btn20L.text.toString()
             showBill()
         }
@@ -115,17 +118,21 @@ class OrderDataInputActivity : AppCompatActivity() {
             cBtnState1 = mLiter
             buttonState()
             clearBtnState(cBtnState2)
-            mPrice = mLiter * Price[0]
+            mPrice = mLiter * hPrice[currentPage]
             tvJumlahLiter.text = btn25L.text.toString()
             showBill()
+        }
+
+        imgOrderBack.setOnClickListener {
+            super.onBackPressed()
         }
     }
 
     private fun showBill() {
         val snack = Snackbar.make(
-            viewPager, "Reguler " + mLiter.toString() + " Liter | IDR " + mPrice + ",- " +
-                    "                                  BAYAR", Snackbar.LENGTH_LONG
-        ).setAction("Action", null)
+            viewPager, "Reguler " + mLiter.toString() + " Liter | IDR " + mPrice + ",- ", Snackbar.LENGTH_LONG
+        ).setActionTextColor(Color.WHITE)
+            .setAction("BAYAR") { startActivity(Intent(applicationContext, LocationActivity::class.java)) }
         snack.view.setBackgroundColor(ContextCompat.getColor(applicationContext, sColor))
         snack.show()
     }
@@ -146,6 +153,10 @@ class OrderDataInputActivity : AppCompatActivity() {
             2 -> {
                 draw = R.drawable.button_order_supreme
                 sColor = R.color.orderRed
+            }
+            3 -> {
+                draw = R.drawable.button_order_diesel
+                sColor = R.color.orderDsGrey
             }
         }
         when (mLiter) {
@@ -199,4 +210,8 @@ class OrderDataInputActivity : AppCompatActivity() {
         }
     }
 
+    private fun orderViewPage() {
+        currentPage = intent.getIntExtra("OrderPage", 0)
+        viewPager.setCurrentItem(currentPage, true)
+    }
 }

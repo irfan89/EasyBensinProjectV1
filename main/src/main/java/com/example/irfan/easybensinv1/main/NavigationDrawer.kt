@@ -7,9 +7,10 @@ import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import history.OrderHistoryActivity
 import kotlinx.android.synthetic.main.activity_navigation_drawer.*
 import kotlinx.android.synthetic.main.app_bar_navigation_drawer.*
-import order.OrderDataInputActivity
+import order.OrderActivity
 
 class NavigationDrawer : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -27,6 +28,14 @@ class NavigationDrawer : AppCompatActivity(), NavigationView.OnNavigationItemSel
 
         nav_view.setNavigationItemSelectedListener(this)
         nav_view.itemIconTintList = null
+
+        btnHomeOrder.setOnClickListener {
+            startActivity(Intent(applicationContext, OrderActivity::class.java))
+        }
+
+        btnHomeHist.setOnClickListener {
+            startActivity(Intent(applicationContext, OrderHistoryActivity::class.java))
+        }
     }
 
     override fun onBackPressed() {
@@ -57,7 +66,7 @@ class NavigationDrawer : AppCompatActivity(), NavigationView.OnNavigationItemSel
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_perusahaan -> {
-                startActivity(Intent(applicationContext, OrderDataInputActivity::class.java))
+
             }
             R.id.nav_ttg_app -> {
 
@@ -73,4 +82,5 @@ class NavigationDrawer : AppCompatActivity(), NavigationView.OnNavigationItemSel
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
     }
+
 }

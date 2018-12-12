@@ -3,12 +3,12 @@ package order
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.v4.content.ContextCompat
-import android.support.v4.view.ViewPager.OnPageChangeListener
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.viewpager.widget.ViewPager.OnPageChangeListener
 import com.example.irfan.easybensinv1.main.NavigationDrawer
 import com.example.irfan.easybensinv1.main.R
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_order_data_input.*
 import location.LocationActivity
 

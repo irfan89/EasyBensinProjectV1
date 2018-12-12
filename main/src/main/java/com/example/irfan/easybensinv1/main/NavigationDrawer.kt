@@ -2,11 +2,11 @@ package com.example.irfan.easybensinv1.main
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.NavigationView
-import android.support.v4.view.GravityCompat
-import android.support.v7.app.ActionBarDrawerToggle
-import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
+import com.google.android.material.navigation.NavigationView
 import comp_catalogue.CompCatalogueActivity
 import history.OrderHistoryActivity
 import kotlinx.android.synthetic.main.activity_navigation_drawer.*

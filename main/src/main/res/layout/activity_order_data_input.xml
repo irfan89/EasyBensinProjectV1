@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                             xmlns:app="http://schemas.android.com/apk/res-auto"
-                                             android:layout_width="match_parent"
-                                             android:layout_height="match_parent"
-                                             android:orientation="vertical">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:orientation="vertical">
 
     <ImageView
             android:layout_width="60dp"
@@ -26,7 +26,7 @@
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="@+id/viewPager" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView2"/>
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:background="@color/colorWhite"
             android:layout_height="wrap_content"
@@ -65,9 +65,9 @@
                 app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="16dp"/>
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <android.support.v4.view.ViewPager
+    <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="338dp"
@@ -75,13 +75,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
-    </android.support.v4.view.ViewPager>
+    </androidx.viewpager.widget.ViewPager>
     <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="95dp"
             app:layout_constraintTop_toBottomOf="@+id/viewPager" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:id="@+id/horizontalScrollView2">
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
                 android:background="@drawable/corner_layout_order"
@@ -132,7 +132,7 @@
                     app:layout_constraintStart_toEndOf="@+id/btn20L"
                     android:layout_marginStart="20dp"
                     app:layout_constraintTop_toTopOf="@+id/btn20L" android:textAllCaps="false"/>
-        </android.support.constraint.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </HorizontalScrollView>
     <TextView
             android:text="BELI"
@@ -143,7 +143,7 @@
             android:textColor="@android:color/black"
             android:layout_marginTop="12dp" app:layout_constraintTop_toTopOf="@+id/horizontalScrollView2"
             android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="parent"/>
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="173dp"
             android:id="@+id/constraintLayout2"
@@ -181,7 +181,7 @@
                 android:id="@+id/textView10"
                 app:layout_constraintTop_toTopOf="@+id/textView8" app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="56dp" android:textStyle="bold" android:textColor="@android:color/black"/>
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="80dp"
                 android:layout_height="24dp"
                 android:background="@drawable/button_order"
@@ -199,7 +199,7 @@
                     app:layout_constraintBottom_toBottomOf="parent" android:textAlignment="center"
                     app:layout_constraintHorizontal_bias="0.045" app:layout_constraintVertical_bias="0.4"
                     android:textColor="@android:color/black" android:textSize="12sp"/>
-        </android.support.constraint.ConstraintLayout>
-    </android.support.constraint.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

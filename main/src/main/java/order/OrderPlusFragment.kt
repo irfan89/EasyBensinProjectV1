@@ -1,12 +1,12 @@
 package order
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.ScaleAnimation
+import androidx.fragment.app.Fragment
 import com.example.irfan.easybensinv1.main.R
 import kotlinx.android.synthetic.main.fragment_order_plus.*
 

@@ -1,8 +1,8 @@
 package history
 
 import android.os.Bundle
-import android.support.v4.view.ViewPager.OnPageChangeListener
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
+import androidx.viewpager.widget.ViewPager.OnPageChangeListener
 import com.example.irfan.easybensinv1.main.R
 import kotlinx.android.synthetic.main.activity_history.*
 import order.DataInputTabAdapter

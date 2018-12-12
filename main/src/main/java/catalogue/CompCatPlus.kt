@@ -1,4 +1,4 @@
-package comp_catalogue
+package catalogue
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,4 +1,4 @@
-package comp_catalogue
+package catalogue
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -19,7 +19,7 @@ class CompCatalogueActivity : AppCompatActivity() {
         adapter.addFragment(CompCatRegular(), "Regular")
         adapter.addFragment(CompCatPlus(), "Plus")
         adapter.addFragment(CompCatSupreme(), "Supreme")
-        adapter.addFragment(CompCatDiesel(), "Diesel")
+        adapter.addFragment(News1(), "Diesel")
         viewPagerCompCat.adapter = adapter
         circleIndCompCat.setViewPager(viewPagerCompCat)
 

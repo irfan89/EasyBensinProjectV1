@@ -19,7 +19,12 @@
         </activity>
 
         <activity
-                android:name="comp_catalogue.CompCatalogueActivity"
+                android:name="newsfeed.NewsfeedActivity"
+                android:theme="@style/Theme.Design.Light.NoActionBar">
+        </activity>
+
+        <activity
+                android:name="catalogue.CompCatalogueActivity"
                 android:theme="@style/Theme.Design.Light.NoActionBar">
         </activity>
 

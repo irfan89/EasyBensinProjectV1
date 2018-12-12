@@ -17,9 +17,11 @@ class CompCatalogueActivity : AppCompatActivity() {
         setContentView(R.layout.activity_company_catalog)
 
         adapter.addFragment(CompCatRegular(), "Regular")
-        adapter.addFragment(CompCatRegular(), "Plus")
-        adapter.addFragment(CompCatRegular(), "Diesel")
+        adapter.addFragment(CompCatPlus(), "Plus")
+        adapter.addFragment(CompCatSupreme(), "Supreme")
+        adapter.addFragment(CompCatDiesel(), "Diesel")
         viewPagerCompCat.adapter = adapter
+        circleIndCompCat.setViewPager(viewPagerCompCat)
 
         viewPagerCompCat.addOnPageChangeListener(object : OnPageChangeListener {
             override fun onPageScrollStateChanged(state: Int) {

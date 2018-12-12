@@ -7,6 +7,7 @@ import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import comp_catalogue.CompCatalogueActivity
 import history.OrderHistoryActivity
 import kotlinx.android.synthetic.main.activity_navigation_drawer.*
 import kotlinx.android.synthetic.main.app_bar_navigation_drawer.*
@@ -36,6 +37,10 @@ class NavigationDrawer : AppCompatActivity(), NavigationView.OnNavigationItemSel
         btnHomeHist.setOnClickListener {
             startActivity(Intent(applicationContext, OrderHistoryActivity::class.java))
         }
+
+        clCompCat.setOnClickListener {
+            startActivity(Intent(applicationContext, CompCatalogueActivity::class.java))
+        }
     }
 
     override fun onBackPressed() {
@@ -46,11 +51,6 @@ class NavigationDrawer : AppCompatActivity(), NavigationView.OnNavigationItemSel
         }
     }
 
-//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        menuInflater.inflate(R.menu.navigation_drawer, menu)
-//        return true
-//    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle action bar item clicks here. The action bar will

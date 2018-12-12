@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_height="?attr/actionBarSize"/>
+    <TextView
+            android:text="Company Catalogue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView26"
+            app:layout_constraintTop_toTopOf="@+id/toolbar" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="@+id/toolbar"
+            android:layout_marginEnd="8dp" android:fontFamily="@font/segoeui"
+            android:textSize="24sp" android:textColor="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="?attr/actionModeCloseDrawable"
+            android:id="@+id/imgBackHomeCat"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="@+id/toolbar"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="@+id/toolbar"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/home_icon"
+            android:id="@+id/imgHomeCat"
+            app:layout_constraintEnd_toEndOf="@+id/toolbar" android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"/>
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="395dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView26" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:hint="Search product" android:id="@+id/textInputLayout">
+
+    </android.support.design.widget.TextInputLayout>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/etSearchProduct"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout" android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginEnd="16dp" app:layout_constraintEnd_toEndOf="parent" android:textSize="12sp"
+            android:hint="Search product"
+            android:background="@drawable/corner_search_layout"
+            android:textAlignment="center"/>
+    <android.support.v4.view.ViewPager
+            android:layout_width="291dp"
+            android:layout_height="337dp"
+            android:background="@drawable/corner_vpager_catalogue_layout"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/etSearchProduct"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:id="@+id/viewPagerCompCat"/>
+
+    <!--<me.relex.circleindicator.CircleIndicator-->
+    <!--android:layout_width="245dp"-->
+    <!--android:layout_height="28dp"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/viewPagerCompCat"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--app:ci_drawable="@drawable/circle_red"-->
+    <!--app:ci_drawable_unselected="@drawable/circle_wred"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:id="@+id/circleIndCompCat">-->
+
+    <!--</me.relex.circleindicator.CircleIndicator>-->
+    <Button
+            android:text="BELI PRODUK"
+            android:textColor="@color/colorWhite"
+            android:layout_width="133dp"
+            android:layout_height="32dp"
+            android:id="@+id/btnBuyPro"
+            android:background="@drawable/button_comp_cat"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout9"/>
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/constraintLayout9">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/bot_logo"
+                android:id="@+id/imageView40" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

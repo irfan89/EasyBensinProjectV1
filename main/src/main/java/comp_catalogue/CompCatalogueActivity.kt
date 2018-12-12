@@ -1,0 +1,41 @@
+package comp_catalogue
+
+import android.os.Bundle
+import android.support.v4.view.ViewPager.OnPageChangeListener
+import android.support.v7.app.AppCompatActivity
+import com.example.irfan.easybensinv1.main.R
+import kotlinx.android.synthetic.main.activity_company_catalog.*
+import order.DataInputTabAdapter
+
+
+class CompCatalogueActivity : AppCompatActivity() {
+
+    private val adapter = DataInputTabAdapter(supportFragmentManager)
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_company_catalog)
+
+        adapter.addFragment(CompCatRegular(), "Regular")
+        adapter.addFragment(CompCatRegular(), "Plus")
+        adapter.addFragment(CompCatRegular(), "Diesel")
+        viewPagerCompCat.adapter = adapter
+
+        viewPagerCompCat.addOnPageChangeListener(object : OnPageChangeListener {
+            override fun onPageScrollStateChanged(state: Int) {
+            }
+
+            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
+
+            override fun onPageSelected(position: Int) {
+                // Check if this is the page you want.
+            }
+        })
+
+        imgBackHomeCat.setOnClickListener {
+            super.onBackPressed()
+        }
+
+    }
+
+}

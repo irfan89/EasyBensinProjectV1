@@ -71,7 +71,7 @@ class OrderDataInputActivity : AppCompatActivity() {
             startActivity(Intent(applicationContext, NavigationDrawer::class.java))
         }
 
-        btn5L.setOnClickListener { view ->
+        btn5L.setOnClickListener {
             mLiter = 5
             cBtnState2 = cBtnState1
             cBtnState1 = mLiter
@@ -81,7 +81,7 @@ class OrderDataInputActivity : AppCompatActivity() {
             tvJumlahLiter.text = btn5L.text.toString()
             showBill()
         }
-        btn10L.setOnClickListener { view ->
+        btn10L.setOnClickListener {
             mLiter = 10
             cBtnState2 = cBtnState1
             cBtnState1 = mLiter
@@ -91,7 +91,7 @@ class OrderDataInputActivity : AppCompatActivity() {
             tvJumlahLiter.text = btn10L.text.toString()
             showBill()
         }
-        btn15L.setOnClickListener { view ->
+        btn15L.setOnClickListener {
             mLiter = 15
             cBtnState2 = cBtnState1
             cBtnState1 = mLiter
@@ -101,7 +101,7 @@ class OrderDataInputActivity : AppCompatActivity() {
             tvJumlahLiter.text = btn15L.text.toString()
             showBill()
         }
-        btn20L.setOnClickListener { view ->
+        btn20L.setOnClickListener {
             mLiter = 20
             cBtnState2 = cBtnState1
             cBtnState1 = mLiter
@@ -112,7 +112,7 @@ class OrderDataInputActivity : AppCompatActivity() {
             showBill()
         }
 
-        btn25L.setOnClickListener { view ->
+        btn25L.setOnClickListener {
             mLiter = 25
             cBtnState2 = cBtnState1
             cBtnState1 = mLiter

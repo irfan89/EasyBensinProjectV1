@@ -10,7 +10,7 @@ import com.example.irfan.easybensinv1.main.NavigationDrawer
 import com.example.irfan.easybensinv1.main.R
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_order_data_input.*
-import location.LocationActivity
+import payment.PaymentActivity
 
 
 class OrderDataInputActivity : AppCompatActivity() {
@@ -23,6 +23,7 @@ class OrderDataInputActivity : AppCompatActivity() {
     private var mPrice = 0
     private var currentPage = 0
     private var sColor = R.color.orderBlack
+    private var typeFuel = arrayOf("Regular", "Plus", "Supreme+", "Diesel")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -129,10 +130,15 @@ class OrderDataInputActivity : AppCompatActivity() {
     }
 
     private fun showBill() {
+        val intent = Intent(this, PaymentActivity::class.java)
+        intent.putExtra("tFuel", typeFuel[currentPage])
+        intent.putExtra("sLiter", tvJumlahLiter.text.toString())
+        intent.putExtra("Price", mPrice.toString())
+
         val snack = Snackbar.make(
             viewPager, "Reguler " + mLiter.toString() + " Liter | IDR " + mPrice + ",- ", Snackbar.LENGTH_LONG
         ).setActionTextColor(Color.WHITE)
-            .setAction("BAYAR") { startActivity(Intent(applicationContext, LocationActivity::class.java)) }
+            .setAction("BAYAR") { startActivity(intent) }
         snack.view.setBackgroundColor(ContextCompat.getColor(applicationContext, sColor))
         snack.show()
     }

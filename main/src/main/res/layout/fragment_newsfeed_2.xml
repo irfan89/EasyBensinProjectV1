@@ -5,13 +5,13 @@
         android:layout_height="264dp">
 
     <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="216dp" app:srcCompat="@drawable/news1"
+            android:layout_width="match_parent"
+            android:layout_height="216dp" app:srcCompat="@drawable/easy_news"
             android:id="@+id/imageView39" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toTopOf="parent"
-            android:scaleType="fitXY"/>
+            android:scaleType="center"/>
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
@@ -24,7 +24,7 @@
             android:layout_marginTop="0dp">
 
         <TextView
-                android:text="Fasilitas Lapangan Banyu Urip"
+                android:text="Easybensin News"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView46" android:textSize="18sp"

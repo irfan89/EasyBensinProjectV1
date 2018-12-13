@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".NavigationDrawer">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_height="?attr/actionBarSize"/>
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp" android:fillViewport="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.571"
+            android:id="@+id/nestedScrollView" android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/clPaymentBayar"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corner_layout_payment"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                    android:id="@+id/constraintLayout18">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/corner_payment_top"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="2dp"
+                        android:layout_marginTop="2dp" app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="2dp"
+                        android:id="@+id/constraintLayout16">
+
+                    <TextView
+                            android:text="Detail pesanan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView54"
+                            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/segoeui" android:textColor="@android:color/black"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="96dp"
+                        android:background="@drawable/corner_profil_edittext"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout16"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="2dp"
+                        app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="2dp"
+                        android:id="@+id/constraintLayout17">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="92dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/button_ltr_payment"
+                            app:layout_constraintTop_toBottomOf="@+id/tvPaymentTFuel"
+                            android:layout_marginTop="8dp" app:layout_constraintStart_toStartOf="@+id/tvPaymentTFuel"
+                    >
+
+                        <TextView
+                                android:text="5 Liter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tvPaymentLiter"
+                                android:gravity="center"
+                                android:background="@android:color/transparent"
+                                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.529"
+                                app:layout_constraintBottom_toBottomOf="parent" android:fontFamily="@font/segoeui"
+                                android:textColor="@android:color/black"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                            android:text="Supreme+"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvPaymentTFuel"
+                            android:fontFamily="@font/secular_one" android:textColor="@android:color/black"
+                            android:layout_marginTop="16dp" app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="parent"/>
+                    <TextView
+                            android:text="60.000,-"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvFuelPrice"
+                            app:layout_constraintTop_toTopOf="@+id/tvPaymentTFuel"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginEnd="32dp" android:fontFamily="@font/segoeui"
+                            android:textColor="@android:color/black"/>
+                    <TextView
+                            android:text="fuel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView67" app:layout_constraintStart_toEndOf="@+id/tvPaymentTFuel"
+                            android:layout_marginStart="8dp" android:fontFamily="@font/secular_one"
+                            android:textColor="@android:color/black"
+                            app:layout_constraintTop_toTopOf="@+id/tvPaymentTFuel"/>
+                    <TextView
+                            android:text="IDR"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView68"
+                            android:fontFamily="@font/segoeui" android:textColor="@android:color/black"
+                            app:layout_constraintTop_toTopOf="@+id/tvFuelPrice"
+                            android:layout_marginEnd="8dp" app:layout_constraintEnd_toStartOf="@+id/tvFuelPrice"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout17"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                            android:text="Edit pesanan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView55"
+                            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/segoeui" android:textColor="@android:color/black"
+                            android:layout_marginTop="4dp" app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="136dp"
+                    android:background="@drawable/corner_layout_payment"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout18"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                    android:id="@+id/constraintLayout20">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/corner_payment_top"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="2dp" app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginEnd="2dp" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="2dp" android:id="@+id/constraintLayout19">
+
+                    <TextView
+                            android:text="Bayar dengan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView59"
+                            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/segoeui" android:textColor="@android:color/black"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="2dp"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout19"
+                        app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="2dp">
+
+                    <RadioButton
+                            android:text="Tunai"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginStart="16dp"
+                            android:buttonTint="@color/colorAccent"
+                            android:id="@+id/radioButton2"
+                            android:checked="false" android:fontFamily="@font/segoeui"
+                            android:textColor="@android:color/black" tools:layout_editor_absoluteY="88dp"
+                            tools:layout_editor_absoluteX="328dp"/>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="#11000000">
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <RadioButton
+                            android:text="Transfer"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginStart="16dp"
+                            android:buttonTint="@color/colorAccent"
+                            android:id="@+id/radioButton"
+                            android:fontFamily="@font/segoeui"
+                            android:textColor="@android:color/black" tools:layout_editor_absoluteY="38dp"
+                            tools:layout_editor_absoluteX="311dp"/>
+                </RadioGroup>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corner_layout_payment"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout20"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/corner_payment_top"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="2dp"
+                        app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="2dp"
+                        app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="2dp"
+                        android:id="@+id/constraintLayout21">
+
+                    <TextView
+                            android:text="Detail pembayaran"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView60"
+                            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                            android:textColor="@android:color/black" android:fontFamily="@font/segoeui"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/corner_profil_edittext"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout21" android:layout_marginEnd="2dp"
+                        android:id="@+id/constraintLayout22">
+
+                    <TextView
+                            android:text="IDR"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView70"
+                            android:fontFamily="@font/segoeui" android:textColor="@android:color/black"
+                            android:layout_marginEnd="8dp" app:layout_constraintEnd_toStartOf="@+id/tvSumPrice"
+                            app:layout_constraintTop_toTopOf="@+id/tvSumPrice"/>
+                    <TextView
+                            android:text="Pembayaran total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView61" app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginStart="16dp" android:layout_marginTop="8dp"
+                            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent" android:textColor="@android:color/black"
+                            android:fontFamily="@font/segoeui"/>
+                    <TextView
+                            android:text="60.000,-"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvSumPrice"
+                            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="32dp"
+                            android:textColor="@android:color/black" android:fontFamily="@font/segoeui"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/corner_profil_edittext"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="2dp"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout22"
+                        android:layout_marginEnd="2dp" app:layout_constraintEnd_toEndOf="parent"
+                        android:id="@+id/constraintLayout23">
+
+                    <TextView
+                            android:text="Pajak"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView63" app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginStart="16dp" android:layout_marginTop="8dp"
+                            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent" android:textColor="@android:color/black"
+                            android:fontFamily="@font/segoeui"/>
+                    <TextView
+                            android:text="-"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView64" app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginEnd="24dp" android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+                            app:layout_constraintTop_toTopOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="2dp"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout23"
+                        android:layout_marginEnd="2dp" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent">
+
+                    <TextView
+                            android:text="IDR"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView71"
+                            android:fontFamily="@font/segoeui" android:textColor="@android:color/black"
+                            android:layout_marginEnd="8dp" app:layout_constraintEnd_toStartOf="@+id/tvTotalPayment"
+                            app:layout_constraintTop_toTopOf="@+id/tvTotalPayment" android:textStyle="bold"/>
+                    <TextView
+                            android:text="Total pembayaran"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView65"
+                            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                            android:textColor="@android:color/black" android:fontFamily="@font/segoeui"/>
+                    <TextView
+                            android:text="60.000,-"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvTotalPayment"
+                            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="32dp"
+                            android:textColor="@android:color/black" android:fontFamily="@font/segoeui"
+                            android:textStyle="bold"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="420dp"
+            android:layout_height="48dp"
+            android:background="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:id="@+id/clPaymentBayar"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="@+id/toolbar"
+            app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+                android:text="BAYAR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView52" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" android:fontFamily="@font/segoeui"
+                android:textColor="@color/colorWhite"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="?attr/actionModeCloseDrawable"
+            android:id="@+id/imgBackPayment" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="@+id/toolbar"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="@+id/toolbar"/>
+    <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp" app:srcCompat="@drawable/home_icon"
+            android:id="@+id/imgHomePayment" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="@+id/toolbar"/>
+    <TextView
+            android:text="Payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView53"
+            app:layout_constraintTop_toTopOf="@+id/toolbar"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:fontFamily="@font/segoeui" android:textSize="24sp" android:textColor="@android:color/black"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

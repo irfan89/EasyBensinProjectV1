@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:tools="http://schemas.android.com/tools"
-      tools:showIn="navigation_view">
+>
 
     <group android:checkableBehavior="single"
            android:id="@+id/group1">
+        <item
+                android:id="@+id/nav_pembayaran"
+                android:title="Pembayaran"/>
+        <item
+                android:id="@+id/nav_riwayat"
+                android:title="Riwayat pesanan"/>
         <item
                 android:id="@+id/nav_perusahaan"
                 android:title="Profil Perusahaan"/>
@@ -20,21 +25,35 @@
                 <item
                         android:id="@+id/nav_username"
                         android:icon="@drawable/google_plus"
-                        android:title="Share"/>
+                        android:title="Username"/>
                 <item
                         android:id="@+id/nav_number"
                         android:icon="@drawable/number"
-                        android:title="Send"/>
+                        android:title="081*********"/>
             </group>
         </menu>
     </item>
 
-
     <group android:checkableBehavior="single"
            android:id="@+id/group3">
         <item
-                android:id="@+id/nav_logout"
-                android:title="Logout"></item>
+                android:id="@id/nav_ttg_app"
+                android:title="Tentang Aplikasi"/>
+        <item
+                android:id="@+id/nav_cust_service"
+                android:title="Customer Service"/>
+
     </group>
+
+
+    <group android:checkableBehavior="single"
+           android:id="@+id/group4">
+        <item
+                android:id="@+id/nav_logout"
+                android:title="Logout">
+
+        </item>
+    </group>
+
 
 </menu>

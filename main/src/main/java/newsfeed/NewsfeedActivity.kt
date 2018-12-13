@@ -20,6 +20,9 @@ class NewsfeedActivity : AppCompatActivity() {
 
         adapter.addFragment(News1(), "News1")
         adapter.addFragment(News2(), "News2")
+        adapter.addFragment(News2(), "News3")
+        adapter.addFragment(News2(), "News4")
+        adapter.addFragment(News2(), "News5")
         viewPagerNewsfeed.adapter = adapter
         circleIndNewsfeed.setViewPager(viewPagerNewsfeed)
 
